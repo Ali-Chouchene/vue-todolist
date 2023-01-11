@@ -24,11 +24,22 @@ const app = Vue.createApp({
     name: "To-Do-List",
     data() {
         return {
+
             newText: "",
             tasks,
+
         }
     },
     computed: {
+        // addClass(i) {
+        //     if (this.tasks.done === false) {
+        //         return this.tasks.doneClass = "";
+        //     }
+        //     else {
+        //         this.tasks.doneClass = "text-decoration-line-through";
+        //     }
+        //     // return this.tasks.done === false ? this.tasks.doneClass = "" : this.tasks.doneClass = "text-decoration-line-through";
+        // },
 
     },
     methods: {
@@ -36,7 +47,8 @@ const app = Vue.createApp({
             if (this.newText) {
                 const newTask = {
                     text: this.newText,
-                    done: false
+                    done: false,
+                    doneClass: ""
                 };
                 this.tasks.push(newTask);
                 this.newText = "";
@@ -45,8 +57,18 @@ const app = Vue.createApp({
         dellTask(i) {
             this.tasks.splice(i, 1);
         },
-
-
+        // addClass() {
+        //     this.done = !this.done;
+        //     if (this.done === false) {
+        //         this.doneClass = "";
+        //     }
+        //     else {
+        //         this.doneClass = "text-decoration-line-through";
+        //     }
+        // },
+        doneToggle() {
+            this.done = !this.done;
+        }
     }
 
 });

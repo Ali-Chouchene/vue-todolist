@@ -3,10 +3,13 @@
 const tasks = [
     {
         text: "fare esercizi Boolean",
-        done: false
+        done: false,
+        doneClass: "",
+
     },
     {
         text: "Pranzare",
-        done: true
+        done: true,
+        doneClass: "",
     },
 ];
