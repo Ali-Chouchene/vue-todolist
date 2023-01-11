@@ -18,21 +18,36 @@ Bonus:
 */
 
 
-console.log("VUE OK", Vue);
+//! console.log("VUE OK", Vue);
 
 const app = Vue.createApp({
-    name: "Vue-Carousel",
+    name: "To-Do-List",
     data() {
         return {
-
+            newText: "",
+            tasks,
         }
     },
     computed: {
 
     },
     methods: {
+        addTask() {
+            if (this.newText) {
+                const newTask = {
+                    text: this.newText,
+                    done: false
+                };
+                this.tasks.push(newTask);
+                this.newText = "";
+            }
+        },
+        dellTask(i) {
+            this.tasks.splice(i, 1);
+        },
 
-    },
+
+    }
 
 });
 

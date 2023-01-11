@@ -1,0 +1,8 @@
+.form-check-input,
+.fa-trash-can {
+    cursor: pointer;
+}
+
+.fa-trash-can:hover {
+    color: red;
+}
