@@ -31,10 +31,10 @@
             <main class="w-50 mx-auto">
                 <h3 class="text-center my-3">Add Something To Do</h3>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nuova Task" v-model.trim="newText"
-                        @keyup.enter="addTask" @keyup.esc="">
+                    <input ref="inputFocus" type="text" class="form-control" placeholder="Nuova Task"
+                        v-model.trim="newText" @keyup.enter="addTask" @keyup.esc="resetInput">
                     <button class="btn btn-outline-success" type="button" @click="addTask">Aggiungi</button>
-                    <button class="btn btn-outline-danger" type="button">Rimuovi</button>
+                    <button class="btn btn-outline-danger" @click="resetInput" type="button">Cancella</button>
                 </div>
                 <ul class="list-group my-4">
                     <li v-for="(task, i) in tasks"

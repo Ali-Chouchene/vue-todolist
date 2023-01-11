@@ -51,7 +51,8 @@ const app = Vue.createApp({
                     doneClass: ""
                 };
                 this.tasks.push(newTask);
-                this.newText = "";
+                this.resetInput();
+                this.$refs.inputFocus.focus();
             }
         },
         dellTask(i) {
@@ -68,7 +69,11 @@ const app = Vue.createApp({
         // },
         doneToggle() {
             this.done = !this.done;
+        },
+        resetInput() {
+            this.newText = "";
         }
+
     }
 
 });
