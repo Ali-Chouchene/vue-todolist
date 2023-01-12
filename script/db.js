@@ -9,7 +9,7 @@ const tasks = [
     },
     {
         text: "Pranzare",
-        done: true,
+        done: false,
         doneClass: "",
     },
 ];
